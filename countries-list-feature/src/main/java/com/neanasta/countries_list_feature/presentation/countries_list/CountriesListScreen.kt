@@ -41,7 +41,9 @@ fun CountriesListScreen(
 ) {
     val state by viewModel.state.collectAsState()
     LaunchedEffect(Unit) {
-        viewModel.setAction(Action.LoadCountries)
+        if (state.countries.isEmpty()) {
+            viewModel.setAction(Action.LoadCountries)
+        }
     }
     MviEffectResolver(viewModel.effect) { effect ->
         when (effect) {

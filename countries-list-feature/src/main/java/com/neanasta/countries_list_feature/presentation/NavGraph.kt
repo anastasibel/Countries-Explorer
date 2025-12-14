@@ -25,9 +25,11 @@ fun NavGraphBuilder.countriesListNavGraph(navController: NavHostController) {
 
     composable<CountriesNavigationRoute.CountryDetails> {
         val country = navController.getArg<Country>(COUNTRY)
-        CountryDetailsScreen(
-            country = country,
-            navigateBack = navController::popBackStack
-        )
+        country?.let {
+            CountryDetailsScreen(
+                country = country,
+                navigateBack = navController::popBackStack
+            )
+        }
     }
 }

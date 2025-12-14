@@ -21,24 +21,19 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil.compose.AsyncImage
-import com.neanasta.core.ui.compose_components.NoDataLayout
 import com.neanasta.core.ui.compose_components.Screen
 import com.neanasta.countries_list_feature.R
 import com.neanasta.countries_list_feature.domain.model.Country
 
 @Composable
 fun CountryDetailsScreen(
-    country: Country?,
+    country: Country,
     navigateBack: () -> Unit
 ) {
-    if (country == null) {
-        NoDataLayout()
-    } else {
-        ScreenContent(
-            country = country,
-            navigateBack = navigateBack
-        )
-    }
+    ScreenContent(
+        country = country,
+        navigateBack = navigateBack
+    )
 }
 
 @Composable

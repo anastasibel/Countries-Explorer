@@ -4,7 +4,7 @@ import com.neanasta.core.room_data_base.entity.CountryEntity
 import com.neanasta.countries_list_feature.domain.model.Country
 
 fun CountryEntity.toModel(): Country = Country(
-    imageFlag = imageFlag?.decodeToString(),
+    imageFlag = imageFlag,
     name = name,
     currencyName = currencyName,
     currencySymbol = currencySymbol,
@@ -15,7 +15,7 @@ fun CountryEntity.toModel(): Country = Country(
 )
 
 fun Country.toEntity() = CountryEntity(
-    imageFlag = imageFlag?.toByteArray(),
+    imageFlag = imageFlag,
     currencyName = currencyName,
     currencySymbol = currencySymbol,
     capital = capital,

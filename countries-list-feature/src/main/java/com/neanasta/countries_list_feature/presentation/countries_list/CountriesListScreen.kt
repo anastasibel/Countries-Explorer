@@ -1,6 +1,5 @@
 package com.neanasta.countries_list_feature.presentation.countries_list
 
-import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row
@@ -19,8 +18,6 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.ImageBitmap
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -28,12 +25,10 @@ import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import coil.compose.AsyncImage
 import com.neanasta.core.base_mvi.MviEffectResolver
-import com.neanasta.core.loadBitmapFromUrl
 import com.neanasta.core.ui.compose_components.DialogMessage
 import com.neanasta.core.ui.compose_components.LoaderFullScreen
 import com.neanasta.core.ui.compose_components.NoDataLayout
 import com.neanasta.core.ui.compose_components.Screen
-import com.neanasta.core.urlToByteArray
 import com.neanasta.countries_list_feature.R
 import com.neanasta.countries_list_feature.domain.model.Country
 import com.neanasta.countries_list_feature.presentation.countries_list.CountriesListContract.Action
@@ -97,7 +92,6 @@ private fun CountryItem(
     country: Country,
     onCountryClick: (Country) -> Unit
 ) {
-    val context = LocalContext.current
     Row(
         verticalAlignment = Alignment.CenterVertically,
         modifier = Modifier

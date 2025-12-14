@@ -1,3 +1,7 @@
+# Сountries Explorer
+
+Android-приложение для просмотра информации о странах с поддержкой офлайн-режима.
+
 ## Стек
 
 * Clean Architecture

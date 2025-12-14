@@ -51,7 +51,7 @@ fun NoDataLayout(
 @Preview
 @Composable
 private fun Preview() {
-    CountriesWorkmateTheme() {
+    CountriesWorkmateTheme {
         NoDataLayout()
     }
 }

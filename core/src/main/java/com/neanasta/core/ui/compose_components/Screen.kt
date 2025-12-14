@@ -48,7 +48,7 @@ fun Screen(
 @Preview
 @Composable
 private fun Preview1() {
-    CountriesWorkmateTheme() {
+    CountriesWorkmateTheme {
         Screen(
             topTitle = "Страны",
         ) {

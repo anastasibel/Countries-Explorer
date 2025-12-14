@@ -63,7 +63,7 @@ private fun CircularLoader(modifier: Modifier = Modifier) {
 @Preview
 @Composable
 private fun LoaderFullScreenPreview() {
-    CountriesWorkmateTheme() {
+    CountriesWorkmateTheme {
         LoaderFullScreen(true)
     }
 }

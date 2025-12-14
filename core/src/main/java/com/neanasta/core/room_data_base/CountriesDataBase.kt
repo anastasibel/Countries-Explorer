@@ -6,7 +6,7 @@ import com.neanasta.core.room_data_base.dao.CountriesDao
 import com.neanasta.core.room_data_base.entity.CountryEntity
 
 @Database(entities = [CountryEntity::class], version = 3, exportSchema = true)
-abstract class CountriesDataBase: RoomDatabase() {
+abstract class CountriesDataBase : RoomDatabase() {
 
     abstract fun countriesDao(): CountriesDao
 }
